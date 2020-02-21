@@ -18,7 +18,7 @@ The series of code blocks within each folder are listed below. I suggest that be
 ## [CUDA INSTALLATION](https://github.com/drecuk/ABM-CUDA-Basics/tree/master/00.Installation)
 00. Installing NVIDIA DRIVERS/CUDA TOOLKIT
 
-## [C++ SDL FOUNDATION](https://github.com/drecuk/ABM-Basics-SDL)
+## [CUDA FOUNDATION](https://github.com/drecuk/ABM-CUDA-Basics)
 - 01. CUDA: Reading your GPU Device Info
 - 02. CUDA: Hello World
 - 03. CUDA: Working with Device Memory
