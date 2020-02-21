@@ -13,7 +13,6 @@
 //  nvcc <filename>.cu -o <outputfile>
 //	##########################################################
 
-#include "book.h"
 #include <iostream>
 using namespace std;
 
@@ -47,7 +46,7 @@ int main(void)
   cout<<"** host mystruct->id: "<<mystruct->id<<endl;
 
 	cout<<"\n------------- allocate memory to device"<<endl;
-	HANDLE_ERROR( cudaMalloc( (void**)&dev_struct, sizeof(MYSTRUCT) ) );
+	cudaMalloc( (void**)&dev_struct, sizeof(MYSTRUCT) );
 
 	cout<<"\n------------- copy mystruct to dev_struct"<<endl;
 	cudaMemcpy( dev_struct, mystruct, sizeof(MYSTRUCT), cudaMemcpyHostToDevice);
@@ -57,7 +56,7 @@ int main(void)
 
 	// copy changed dev_agent to the struct, output the printing in the kernel
 	cout<<"\n------------- copying memory from device to host and printing"<<endl;
-	HANDLE_ERROR( cudaMemcpy( mystruct, dev_struct, sizeof(MYSTRUCT), cudaMemcpyDeviceToHost ) );
+	cudaMemcpy( mystruct, dev_struct, sizeof(MYSTRUCT), cudaMemcpyDeviceToHost );
 
 	cout<<"\n------------- output changed results"<<endl;
   cout<<"** host mystruct->id: "<<mystruct->id<<endl;

@@ -33,7 +33,6 @@
 //	##########################################################
 #include <stdio.h>
 #include <iostream>
-#include "book.h"
 using namespace std;
 
 // N = 0.22 billion (1 billion = 9 zeros)
@@ -110,7 +109,7 @@ int main(int argc, const char * argv[])
   // note the N * sizeof(int)
   size_t size = N * sizeof(unsigned long int);
   cout << size << endl;
-	HANDLE_ERROR( cudaMemcpy(dev_arr, arr, size, cudaMemcpyHostToDevice));
+	cudaMemcpy(dev_arr, arr, size, cudaMemcpyHostToDevice);
 
   cout << "------------ calling kernel fillArray" << endl;
   // What's happening here?
@@ -125,7 +124,7 @@ int main(int argc, const char * argv[])
   cout << "------------ copy dev_arr to arr" << endl;
 	// note the N * sizeof(int)
 
-	HANDLE_ERROR( cudaMemcpy(arr, dev_arr, s, cudaMemcpyDeviceToHost));
+	cudaMemcpy(arr, dev_arr, s, cudaMemcpyDeviceToHost);
 
   cout << "------------ printing changed host array" << endl;
 	for(unsigned long int i=0; i<N; i++)
