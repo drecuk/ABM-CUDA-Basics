@@ -34,4 +34,4 @@ The series of code blocks within each folder are listed below. I suggest that be
 - 13. CUDA: Structs for Agents
 
 ## ACKWNOWLEDGEMENTS
-“This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme ( ERC funded project No. 670518 LOST FRONTIERS)”
+“This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (ERC funded project No. 670518 LOST FRONTIERS)”
